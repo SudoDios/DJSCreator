@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane fx:id="anchor_root" prefHeight="380.0" prefWidth="520.0" style="-fx-background-color: #355070;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sdidev.desk.dsjc.controllers.ControllerMain">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" style="-fx-background-color: #324c6c; -fx-background-radius: 0 12 12 0;" HBox.hgrow="ALWAYS">
+               <children>
+                   <JFXRippler maskType="FIT" ripplerFill="#eaac8b">
+                       <VBox fx:id="btn_icon" alignment="CENTER" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #6d597a; -fx-background-radius: 12;">
+                           <effect>
+                               <DropShadow height="55.91" radius="27.835" spread="0.27" width="57.43">
+                                   <color>
+                                       <Color red="0.2631579041481018" green="0.2631579041481018" blue="0.2631579041481018" />
+                                   </color>
+                               </DropShadow>
+                           </effect>
+                           <children>
+                               <ImageView fx:id="img_icon" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../images/icon_apps.png" />
+                                   </image>
+                               </ImageView>
+                           </children>
+                       </VBox>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" top="25.0" />
+                     </VBox.margin>
+                   </JFXRippler>
+               </children>
+               <effect>
+                  <DropShadow height="0.0" radius="4.75" spread="0.05" />
+               </effect>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="Infinity" prefHeight="1000.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXTextField fx:id="edit_name" focusColor="#eaac8b" labelFloat="true" maxWidth="Infinity" promptText="Display Name" style="-fx-text-fill: #ffffff; -fx-font-size: 15; -fx-highlight-fill: #eaac8b; -fx-highlight-text-fill: #355070; -fx-prompt-text-fill: #bbb2aa" unFocusColor="#bbb2aa">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" top="25.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXTextField fx:id="edit_exec_path" focusColor="#eaac8b" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Execute file path (*.jar)" style="-fx-text-fill: #ffffff; -fx-font-size: 15; -fx-highlight-fill: #eaac8b; -fx-highlight-text-fill: #355070; -fx-prompt-text-fill: #bbb2aa" unFocusColor="#bbb2aa" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></JFXTextField>
+                        <JFXButton fx:id="btn_choice_exe" buttonType="RAISED" prefHeight="38.0" ripplerFill="#eaac8b" style="-fx-background-color: #6d597a; -fx-background-radius: 12; -fx-text-fill: #ffffff;" text="Browse" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" top="32.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXComboBox fx:id="combo_box_category" focusColor="#eaac8b" labelFloat="true" maxWidth="Infinity" promptText="Category" style="-fx-text-fill: #ffffff; -fx-font-size: 15; -fx-highlight-fill: #eaac8b; -fx-highlight-text-fill: #355070; -fx-prompt-text-fill: #bbb2aa" unFocusColor="#bbb2aa" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" top="32.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXCheckBox fx:id="check_terminal" checkedColor="#eaac8b" style="mark-color: #212121;" styleClass="custom-jfx-check-box" text="Launch in terminal" textFill="#ffffff" unCheckedColor="#bbb2aa">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" top="32.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+                  <JFXTextField fx:id="edit_description" focusColor="#eaac8b" labelFloat="true" layoutX="25.0" layoutY="35.0" maxWidth="Infinity" promptText="Description" style="-fx-text-fill: #ffffff; -fx-font-size: 15; -fx-highlight-fill: #eaac8b; -fx-highlight-text-fill: #355070; -fx-prompt-text-fill: #bbb2aa" unFocusColor="#bbb2aa">
+                     <VBox.margin>
+                        <Insets left="15.0" right="25.0" top="32.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btn_close" prefHeight="38.0" style="-fx-background-color: #355070; -fx-text-fill: #ffffff; -fx-background-radius: 12; -fx-border-color: #ffffff; -fx-border-width: 1; -fx-border-radius: 12" text="Close">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_create" buttonType="RAISED" layoutX="147.0" layoutY="36.0" prefHeight="38.0" style="-fx-background-color: #ffcdb2; -fx-background-radius: 12;" text="Create Launcher" />
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
